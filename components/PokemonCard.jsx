@@ -6,6 +6,8 @@ function PokemonCard({ pokemon }) {
 
     const tipoSecundario = pokemon.type2?.trim();
 
+ 
+
     return (
         <article className={`pokemon-card type-${tipoPrincipal}`}>
 
@@ -16,6 +18,12 @@ function PokemonCard({ pokemon }) {
             <span className="pokemon-name">
             <h2>{pokemon.name}</h2>
             </span>
+
+            {pokemon.form?.trim() && (
+            <span className="pokemon-form">
+            {pokemon.form}
+            </span>
+            )}
 
             <div className="pokemon-image">
                 <img
