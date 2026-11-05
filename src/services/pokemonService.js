@@ -4,7 +4,7 @@ export async function listarPokemons() {
     const response = await fetch(API_URL);
 
     if (!response.ok) {
-        throw new Error("Erro ao buscar Pokémon");
+        throw new Error("erro ao buscar Pokémon");
     }
 
     return await response.json();
